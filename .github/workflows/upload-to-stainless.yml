@@ -1,0 +1,16 @@
+name: Upload Spec to Stainless
+on:
+  push:
+    branches:
+      - main
+  workflow_dispatch:
+jobs:
+  upload-spec-to-stainless:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      
+      - name: Stainless — Upload OpenAPI specification
+        uses: stainless-api/upload-openapi-spec-action@v0.2.1
+        
+    
